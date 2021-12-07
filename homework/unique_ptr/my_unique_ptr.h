@@ -20,7 +20,7 @@ public:
     template<typename Type>
     explicit my_unique_ptr(Type* ptr) noexcept : ptr_{ptr} {}
 
-    my_unique_ptr& operator=(T* ptr) {
+    my_unique_ptr& operator=(T* ptr) noexcept {
         reset(ptr);
     }
     
