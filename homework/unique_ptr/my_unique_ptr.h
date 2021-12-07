@@ -14,7 +14,7 @@ public:
     }
 
     my_unique_ptr& operator=(my_unique_ptr&& other) noexcept {
-        std::swap(ptr_, other.ptr_);
+        reset(other.release());
     }
 
     template<typename Type>
